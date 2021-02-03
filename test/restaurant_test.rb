@@ -79,14 +79,14 @@ class RestaurantTest < Minitest::Test
     restaurant2 = Restaurant.new('16:00', 'Il Posto')
     restaurant3 = Restaurant.new('5:00', 'Sherrys Tasty Desserts')
 
-    expected = "Fuel Cafe will be closing at 11:00AM"
-    assert_equal expected , restaurant1.announce_closing_time(5)
+    expected1 = "Fuel Cafe will be closing at 11:00AM"
+    assert_equal expected1 , restaurant1.announce_closing_time(5)
 
-    expected = "Il Posto will be closing at 11:00PM"
-    assert_equal expected, restaurant2.announce_closing_time(7)
+    expected2 = "Il Posto will be closing at 11:00PM"
+    assert_equal expected2, restaurant2.announce_closing_time(7)
 
-    expected = "Sherrys Tasty Desserts will be closing at 3:00PM"
-    assert_equal expected, restaurant3.announce_closing_time(10)
+    expected3 = "Sherrys Tasty Desserts will be closing at 3:00PM"
+    assert_equal expected3, restaurant3.announce_closing_time(10)
   end
 
   #YAY, it didnt work the first time, im glad i was able to run another test with opening before lunch and closing later to double check.
